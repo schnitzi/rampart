@@ -11,18 +11,6 @@ are included for [Java](src/test/java/org/computronium/chess/TestMoveGeneratorJa
 and [Kotlin](src/test/kotlin/org/computronium/chess/TestMoveGeneratorKotlin.kt).
 
 
-This project contains:
-
-1.  An extensive test data set for stress testing your chess move generator.
-
-2.  A viewer for the test data files.
-
-3.  A graphical tool for creating and editing these test data files, which includes a move generator used in generating test cases.
-
-This project does NOT contain:
-
-1.  A chess program that you can play against.
-
 # Overview
 
 An important component of any chess engine is the move generator,
@@ -39,6 +27,17 @@ wishing for something more complete and battle-tested.  So I decided
 to make my own full data set, and the easiest way to do that was to
 write a tool.
 
+This project contains:
+
+1.  An extensive test data set for stress testing your chess move generator.
+
+2.  A viewer for the test data files.
+
+3.  A graphical tool for creating and editing these test data files, which includes a move generator used in generating test cases.
+
+This project does NOT contain:
+
+1.  A chess program that you can play against.
 
 ## The test data sets
 
@@ -78,14 +77,24 @@ cases.
 
 Your tests can run through the included data files, and for each
 test case, compare the expected set of moves (contained in the data
-file) against the set of moves that your board generator generates.
-Your move generator should generate the exact same set of resulting
-boards in all cases -- no more, and no less.  If there is any
+file as FENs) against the set of moves that your board generator
+generates.  Your move generator should generate the exact same set of
+resulting boards in all cases -- no more, and no less.  If there is any
 discrepancy, you probably have a bug in your move generator.  (Or,
-maybe there's a bug in the test data -- please let me know, so I can
+possibly, there's a bug in the test data -- please let me know, so I can
 fix it!)
 
-### Type 2: Move rollbacks
+### Type 2: Algebraic move names
+
+Your move generator may or may not generate the actual move names
+(such as "Qe4").  If it does, you can test your move name generation
+using these same test data files -- all of them include the move
+names (in algebraic format) that your move generator should
+generate.  Note this is a weaker test than testing against the
+resulting FEN positions, which include various flags that fully
+represent the board state.
+
+### Type 3: Move rollbacks
 
 In addition to testing that your move generator produces the
 correct set of moves going forward from a position, your chess
@@ -97,15 +106,7 @@ by performing the undo for each test case and seeing if you end up with
 a FEN that matches the starting position.  The included sample tests
 contain just such a rollback test.
 
-### Type 3: Algebraic move names
-
-Your move generator may or may not generate the actual move names
-(such as "Qe4").  If it does, you can test your move name generation
-using these same test data files -- all of them include the move
-names (in algebraic format) that your move generator should
-generate.
-
-## The graphical tool
+# The graphical tool
 
 The included test files are usable on their own for testing your move
 generator.  These were generated using a small graphical editor, the
