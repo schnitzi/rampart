@@ -29,11 +29,11 @@ class TestMoveGeneratorKotlin {
     private fun doTest(testFile: File) {
         val testCaseGroup = TestCaseGroup.fromFile(testFile)
 
-        println("Testing $testFile (${testCaseGroup.description ?: "no description"})")
+        println("Testing file $testFile (${testCaseGroup})")
 
         for (testCase in testCaseGroup.testCases) {
 
-            println("Testing '${testCase.start}' (${testCase.start.description ?: "no description"})'")
+            println("  Testing case '${testCase}'")
 
             val expectedMoves = testCase.expected.associateBy({ it.move.toString() }, { it.fen })
 

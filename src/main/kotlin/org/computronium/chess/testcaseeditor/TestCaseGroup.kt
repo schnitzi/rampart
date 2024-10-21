@@ -52,6 +52,10 @@ class TestCaseGroup(description: String?, testCases: List<TestCase> = listOf(), 
         return testCases.stream().anyMatch { it.start.fen == newFEN }
     }
 
+    override fun toString(): String {
+        return description ?: "no description"
+    }
+
     companion object {
         fun fromFile(file: File) : TestCaseGroup {
             val jsonString: String = file.readText(Charsets.UTF_8)

@@ -55,7 +55,7 @@ class TestCase(@Expose val description: String?,
     }
 
     override fun toString(): String {
-        return start.fen
+        return start.fen + (if (description == null) "" else " ($description)")
     }
 
     override fun equals(other: Any?): Boolean {

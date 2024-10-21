@@ -1,5 +1,5 @@
 {
-  "description": "Particularly taxing situations involving move and piece counts.",
+  "description": "Particularly taxing situations involving move and piece counts.  Only positions that can be reached in a standard game of chess are included.",
   "testCases": [
     {
       "start": {
@@ -1963,7 +1963,7 @@
     },
     {
       "start": {
-        "description": "",
+        "description": "Maximal black queens.",
         "fen": "8/6kR/8/8/8/bq6/1rqqqqqq/K1nqnbrq b - - 0 1"
       },
       "expected": [

@@ -16,7 +16,7 @@ open class CaptureTransform(private val captureIndex : Int) : Transform {
 
     override fun apply(boardState: BoardState) {
 
-        var opponentSideData = boardState.sideData[1 - boardState.whoseTurn]
+        val opponentSideData = boardState.sideData[1 - boardState.whoseTurn]
         opponentCouldCastleKingSide = opponentSideData.canKingSideCastle
         opponentCouldCastleQueenSide = opponentSideData.canQueenSideCastle
 
@@ -47,7 +47,7 @@ open class CaptureTransform(private val captureIndex : Int) : Transform {
 
         boardState[captureIndex] = capturedPiece
 
-        var opponentSideData = boardState.sideData[1 - boardState.whoseTurn]
+        val opponentSideData = boardState.sideData[1 - boardState.whoseTurn]
         opponentSideData.canKingSideCastle = opponentCouldCastleKingSide
         opponentSideData.canQueenSideCastle = opponentCouldCastleQueenSide
     }
