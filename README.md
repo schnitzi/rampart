@@ -2,15 +2,14 @@
 
 ># Dive right in!
 >
->If you're here looking for the nasty data files containing [FENs](https://en.wikipedia.org/wiki/Forsyth%E2%80%93Edwards_Notation)
->to test your chess move generator with, they can be found [here](src/main/resources/testcases).
+> If you're here looking for the nasty data files containing [FENs](https://en.wikipedia.org/wiki/Forsyth%E2%80%93Edwards_Notation)
+> to test your chess move generator with, they can be found [here](src/main/resources/testcases).
 >
-> I recommend you read the description below however and
-try to implement the [three kinds of recommended tests](#Test-types).
+> I recommend you read the description below however and consider
+> implementing the [three kinds of recommended tests](#Using-the-test-data-files-to-test-your-move-generator).
 >
->There are example unit tests (which test the included move generator) using these files
-are included for [Java](src/test/java/org/computronium/chess/TestMoveGeneratorJava.java)
-and [Kotlin](src/test/kotlin/org/computronium/chess/TestMoveGeneratorKotlin.kt).
+> There are example unit tests (which test the included move generator) using 
+> these files are included for [Java](src/test/java/org/computronium/chess/TestMoveGeneratorJava.java) and [Kotlin](src/test/kotlin/org/computronium/chess/TestMoveGeneratorKotlin.kt).
 
 
 # Overview
@@ -33,9 +32,9 @@ This project contains:
 
 1.  An extensive test data set for stress testing your chess move generator.
 
-2.  A viewer for the test data files.
+2.  Example tests that use the test data files to test an included example move generator.
 
-3.  A graphical tool for creating and editing these test data files, which includes a move generator used in generating test cases.
+3.  A graphical tool for creating, editing, and viewing these test data files, which also uses the move generator to generate test cases.
 
 This project does NOT contain:
 
@@ -66,20 +65,26 @@ be handy for other purposes later).  As there is no particular order
 to the resulting moves, it is recommended that you generate moves into
 a Set class, so you can just check that `actual` equals `expected`.
 
+There are test files for positions involving checkmates and stalemates.
+Most move generators will and should find no legal moves for
+these test cases, but depending on how you write your chess engine, your
+move generator might never encounter this situation -- you can skip these
+tests if so.  
+
 As this project contains its own move generator, I've included
 sample tests (in Java and Kotlin) that test it against the test
 data files.  As the test data files were generated using this same
 engine, the tests will of course pass!  But the tests demonstrate
-how you can set up similar tests for your chess engine, to the below
-cases.
+how you can set up similar tests for your chess engine, as described
+below.
 
-## Test types
+## Using the test data files to test your move generator
 
 ### Type 1: Finding all moves
 
 Your tests can run through the included data files, and for each
 test case, compare the expected set of moves (contained in the data
-file as FENs) against the set of moves that your board generator
+file as FENs) against the set of moves that your move generator
 generates.  Your move generator should generate the exact same set of
 resulting boards in all cases -- no more, and no less.  If there is any
 discrepancy, you probably have a bug in your move generator.  (Or,
@@ -99,8 +104,9 @@ flags that more fully represent the board state.
 Moves that result in a checkmate do in fact generate the standard
 algebraic checkmate symbol `#` at the end of their move names, but
 in many move generators this is extra baggage that is not worth
-checking for at the move generation stage.  There is no standard
-algebraic symbol for stalemate, so you won't be able to test for that.
+checking for at the move generation stage, so adjust your tests
+accordingly.  There is no standard algebraic symbol for stalemate,
+so you won't be able to test for that via the move name.
 
 ### Type 3: Move rollbacks
 
@@ -112,9 +118,9 @@ features, where pieces get put back wrong, 'already castled' flags
 don't get unset, etc.  You can test your undo feature easily enough
 by performing the undo for each test case and seeing if you end up with
 a FEN that matches the starting position.  The included sample tests
-contain just such a rollback test.
+contain just such a rollback test for every test case.
 
-# The graphical tool
+# The graphical tool (that you can ignore)
 
 The included test files are usable on their own for testing your move
 generator.  These were generated using a small graphical editor, the
