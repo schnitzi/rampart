@@ -2,9 +2,11 @@
 
 ># Dive right in!
 >
->If you're here looking for the nasty data files to test your chess move generator with,
-they can be found [here](src/main/resources/testcases).  I recommend you read the description below however and
-try to implement the three kinds of recommended tests.
+>If you're here looking for the nasty data files containing [FENs](https://en.wikipedia.org/wiki/Forsyth%E2%80%93Edwards_Notation)
+>to test your chess move generator with, they can be found [here](src/main/resources/testcases).
+>
+> I recommend you read the description below however and
+try to implement the [three kinds of recommended tests](#Test-types).
 >
 >There are example unit tests (which test the included move generator) using these files
 are included for [Java](src/test/java/org/computronium/chess/TestMoveGeneratorJava.java)
@@ -93,6 +95,12 @@ names (in algebraic format) that your move generator should
 generate.  Note this is a weaker test than testing against the
 resulting FEN positions, which include various flags that fully
 represent the board state.
+
+Moves that result in a checkmate do in fact generate the standard
+algebraic checkmate symbol `#` at the end of their move names, but
+in many move generators this is extra baggage that is not worth
+checking for at the move generation stage.  There is no standard
+algebraic symbol for stalemate, so you won't be able to test for that.
 
 ### Type 3: Move rollbacks
 

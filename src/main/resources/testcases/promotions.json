@@ -3,8 +3,8 @@
   "testCases": [
     {
       "start": {
-        "description": "A simple promotion, with some chances to check opposing king.",
-        "fen": "1k6/5P2/8/8/8/8/8/4K3 w - - 20 1"
+        "fen": "1k6/5P2/8/8/8/8/8/4K3 w - - 20 1",
+        "description": "A simple promotion, with some chances to check opposing king."
       },
       "expected": [
         {
@@ -46,9 +46,54 @@
       ]
     },
     {
+      "description": "Transpose of 1k6/5P2/8/8/8/8/8/4K3 w - - 20 1",
       "start": {
-        "description": "Eight black pawns all promoting via capture.",
-        "fen": "3k4/8/1K6/8/8/8/pppppppp/RRRRRRRR b - - 0 1"
+        "fen": "4k3/8/8/8/8/8/5p2/1K6 b - - 20 1",
+        "description": "A simple promotion, with some chances to check opposing king."
+      },
+      "expected": [
+        {
+          "move": "f1=Q+",
+          "fen": "4k3/8/8/8/8/8/8/1K3q2 w - - 0 2"
+        },
+        {
+          "move": "f1=R+",
+          "fen": "4k3/8/8/8/8/8/8/1K3r2 w - - 0 2"
+        },
+        {
+          "move": "f1=N",
+          "fen": "4k3/8/8/8/8/8/8/1K3n2 w - - 0 2"
+        },
+        {
+          "move": "f1=B",
+          "fen": "4k3/8/8/8/8/8/8/1K3b2 w - - 0 2"
+        },
+        {
+          "move": "Kd7",
+          "fen": "8/3k4/8/8/8/8/5p2/1K6 w - - 21 2"
+        },
+        {
+          "move": "Ke7",
+          "fen": "8/4k3/8/8/8/8/5p2/1K6 w - - 21 2"
+        },
+        {
+          "move": "Kf7",
+          "fen": "8/5k2/8/8/8/8/5p2/1K6 w - - 21 2"
+        },
+        {
+          "move": "Kd8",
+          "fen": "3k4/8/8/8/8/8/5p2/1K6 w - - 21 2"
+        },
+        {
+          "move": "Kf8",
+          "fen": "5k2/8/8/8/8/8/5p2/1K6 w - - 21 2"
+        }
+      ]
+    },
+    {
+      "start": {
+        "fen": "3k4/8/1K6/8/8/8/pppppppp/RRRRRRRR b - - 0 1",
+        "description": "Eight black pawns all promoting via capture."
       },
       "expected": [
         {
@@ -262,9 +307,226 @@
       ]
     },
     {
+      "description": "Transpose of 3k4/8/1K6/8/8/8/pppppppp/RRRRRRRR b - - 0 1",
       "start": {
-        "description": "Eight white pawns all capable of promoting via capture.",
-        "fen": "nnnnnnnn/PPPPPPPP/8/8/8/8/8/K6k w - - 0 1"
+        "fen": "rrrrrrrr/PPPPPPPP/8/8/8/1k6/8/3K4 w - - 0 1",
+        "description": "Eight white pawns all promoting via capture."
+      },
+      "expected": [
+        {
+          "move": "Kc1",
+          "fen": "rrrrrrrr/PPPPPPPP/8/8/8/1k6/8/2K5 b - - 1 1"
+        },
+        {
+          "move": "Ke1",
+          "fen": "rrrrrrrr/PPPPPPPP/8/8/8/1k6/8/4K3 b - - 1 1"
+        },
+        {
+          "move": "Kd2",
+          "fen": "rrrrrrrr/PPPPPPPP/8/8/8/1k6/3K4/8 b - - 1 1"
+        },
+        {
+          "move": "Ke2",
+          "fen": "rrrrrrrr/PPPPPPPP/8/8/8/1k6/4K3/8 b - - 1 1"
+        },
+        {
+          "move": "axb8=Q",
+          "fen": "rQrrrrrr/1PPPPPPP/8/8/8/1k6/8/3K4 b - - 0 1"
+        },
+        {
+          "move": "axb8=R",
+          "fen": "rRrrrrrr/1PPPPPPP/8/8/8/1k6/8/3K4 b - - 0 1"
+        },
+        {
+          "move": "axb8=N",
+          "fen": "rNrrrrrr/1PPPPPPP/8/8/8/1k6/8/3K4 b - - 0 1"
+        },
+        {
+          "move": "axb8=B",
+          "fen": "rBrrrrrr/1PPPPPPP/8/8/8/1k6/8/3K4 b - - 0 1"
+        },
+        {
+          "move": "bxa8=Q",
+          "fen": "Qrrrrrrr/P1PPPPPP/8/8/8/1k6/8/3K4 b - - 0 1"
+        },
+        {
+          "move": "bxa8=R",
+          "fen": "Rrrrrrrr/P1PPPPPP/8/8/8/1k6/8/3K4 b - - 0 1"
+        },
+        {
+          "move": "bxa8=N",
+          "fen": "Nrrrrrrr/P1PPPPPP/8/8/8/1k6/8/3K4 b - - 0 1"
+        },
+        {
+          "move": "bxa8=B",
+          "fen": "Brrrrrrr/P1PPPPPP/8/8/8/1k6/8/3K4 b - - 0 1"
+        },
+        {
+          "move": "bxc8=Q",
+          "fen": "rrQrrrrr/P1PPPPPP/8/8/8/1k6/8/3K4 b - - 0 1"
+        },
+        {
+          "move": "bxc8=R",
+          "fen": "rrRrrrrr/P1PPPPPP/8/8/8/1k6/8/3K4 b - - 0 1"
+        },
+        {
+          "move": "bxc8=N",
+          "fen": "rrNrrrrr/P1PPPPPP/8/8/8/1k6/8/3K4 b - - 0 1"
+        },
+        {
+          "move": "bxc8=B",
+          "fen": "rrBrrrrr/P1PPPPPP/8/8/8/1k6/8/3K4 b - - 0 1"
+        },
+        {
+          "move": "cxb8=Q",
+          "fen": "rQrrrrrr/PP1PPPPP/8/8/8/1k6/8/3K4 b - - 0 1"
+        },
+        {
+          "move": "cxb8=R",
+          "fen": "rRrrrrrr/PP1PPPPP/8/8/8/1k6/8/3K4 b - - 0 1"
+        },
+        {
+          "move": "cxb8=N",
+          "fen": "rNrrrrrr/PP1PPPPP/8/8/8/1k6/8/3K4 b - - 0 1"
+        },
+        {
+          "move": "cxb8=B",
+          "fen": "rBrrrrrr/PP1PPPPP/8/8/8/1k6/8/3K4 b - - 0 1"
+        },
+        {
+          "move": "cxd8=Q",
+          "fen": "rrrQrrrr/PP1PPPPP/8/8/8/1k6/8/3K4 b - - 0 1"
+        },
+        {
+          "move": "cxd8=R",
+          "fen": "rrrRrrrr/PP1PPPPP/8/8/8/1k6/8/3K4 b - - 0 1"
+        },
+        {
+          "move": "cxd8=N",
+          "fen": "rrrNrrrr/PP1PPPPP/8/8/8/1k6/8/3K4 b - - 0 1"
+        },
+        {
+          "move": "cxd8=B",
+          "fen": "rrrBrrrr/PP1PPPPP/8/8/8/1k6/8/3K4 b - - 0 1"
+        },
+        {
+          "move": "exd8=Q",
+          "fen": "rrrQrrrr/PPPP1PPP/8/8/8/1k6/8/3K4 b - - 0 1"
+        },
+        {
+          "move": "exd8=R",
+          "fen": "rrrRrrrr/PPPP1PPP/8/8/8/1k6/8/3K4 b - - 0 1"
+        },
+        {
+          "move": "exd8=N",
+          "fen": "rrrNrrrr/PPPP1PPP/8/8/8/1k6/8/3K4 b - - 0 1"
+        },
+        {
+          "move": "exd8=B",
+          "fen": "rrrBrrrr/PPPP1PPP/8/8/8/1k6/8/3K4 b - - 0 1"
+        },
+        {
+          "move": "exf8=Q",
+          "fen": "rrrrrQrr/PPPP1PPP/8/8/8/1k6/8/3K4 b - - 0 1"
+        },
+        {
+          "move": "exf8=R",
+          "fen": "rrrrrRrr/PPPP1PPP/8/8/8/1k6/8/3K4 b - - 0 1"
+        },
+        {
+          "move": "exf8=N",
+          "fen": "rrrrrNrr/PPPP1PPP/8/8/8/1k6/8/3K4 b - - 0 1"
+        },
+        {
+          "move": "exf8=B",
+          "fen": "rrrrrBrr/PPPP1PPP/8/8/8/1k6/8/3K4 b - - 0 1"
+        },
+        {
+          "move": "fxe8=Q",
+          "fen": "rrrrQrrr/PPPPP1PP/8/8/8/1k6/8/3K4 b - - 0 1"
+        },
+        {
+          "move": "fxe8=R",
+          "fen": "rrrrRrrr/PPPPP1PP/8/8/8/1k6/8/3K4 b - - 0 1"
+        },
+        {
+          "move": "fxe8=N",
+          "fen": "rrrrNrrr/PPPPP1PP/8/8/8/1k6/8/3K4 b - - 0 1"
+        },
+        {
+          "move": "fxe8=B",
+          "fen": "rrrrBrrr/PPPPP1PP/8/8/8/1k6/8/3K4 b - - 0 1"
+        },
+        {
+          "move": "fxg8=Q+",
+          "fen": "rrrrrrQr/PPPPP1PP/8/8/8/1k6/8/3K4 b - - 0 1"
+        },
+        {
+          "move": "fxg8=R",
+          "fen": "rrrrrrRr/PPPPP1PP/8/8/8/1k6/8/3K4 b - - 0 1"
+        },
+        {
+          "move": "fxg8=N",
+          "fen": "rrrrrrNr/PPPPP1PP/8/8/8/1k6/8/3K4 b - - 0 1"
+        },
+        {
+          "move": "fxg8=B+",
+          "fen": "rrrrrrBr/PPPPP1PP/8/8/8/1k6/8/3K4 b - - 0 1"
+        },
+        {
+          "move": "gxf8=Q",
+          "fen": "rrrrrQrr/PPPPPP1P/8/8/8/1k6/8/3K4 b - - 0 1"
+        },
+        {
+          "move": "gxf8=R",
+          "fen": "rrrrrRrr/PPPPPP1P/8/8/8/1k6/8/3K4 b - - 0 1"
+        },
+        {
+          "move": "gxf8=N",
+          "fen": "rrrrrNrr/PPPPPP1P/8/8/8/1k6/8/3K4 b - - 0 1"
+        },
+        {
+          "move": "gxf8=B",
+          "fen": "rrrrrBrr/PPPPPP1P/8/8/8/1k6/8/3K4 b - - 0 1"
+        },
+        {
+          "move": "gxh8=Q",
+          "fen": "rrrrrrrQ/PPPPPP1P/8/8/8/1k6/8/3K4 b - - 0 1"
+        },
+        {
+          "move": "gxh8=R",
+          "fen": "rrrrrrrR/PPPPPP1P/8/8/8/1k6/8/3K4 b - - 0 1"
+        },
+        {
+          "move": "gxh8=N",
+          "fen": "rrrrrrrN/PPPPPP1P/8/8/8/1k6/8/3K4 b - - 0 1"
+        },
+        {
+          "move": "gxh8=B",
+          "fen": "rrrrrrrB/PPPPPP1P/8/8/8/1k6/8/3K4 b - - 0 1"
+        },
+        {
+          "move": "hxg8=Q",
+          "fen": "rrrrrrQr/PPPPPPP1/8/8/8/1k6/8/3K4 b - - 0 1"
+        },
+        {
+          "move": "hxg8=R",
+          "fen": "rrrrrrRr/PPPPPPP1/8/8/8/1k6/8/3K4 b - - 0 1"
+        },
+        {
+          "move": "hxg8=N",
+          "fen": "rrrrrrNr/PPPPPPP1/8/8/8/1k6/8/3K4 b - - 0 1"
+        },
+        {
+          "move": "hxg8=B",
+          "fen": "rrrrrrBr/PPPPPPP1/8/8/8/1k6/8/3K4 b - - 0 1"
+        }
+      ]
+    },
+    {
+      "start": {
+        "fen": "nnnnnnnn/PPPPPPPP/8/8/8/8/8/K6k w - - 0 1",
+        "description": "Eight white pawns all capable of promoting via capture."
       },
       "expected": [
         {
@@ -506,9 +768,254 @@
       ]
     },
     {
+      "description": "Transpose of nnnnnnnn/PPPPPPPP/8/8/8/8/8/K6k w - - 0 1",
       "start": {
-        "description": "Black must block check by promotion.",
-        "fen": "8/ppp3p1/8/8/3p4/8/1ppp2K1/brk2Q1n b - - 12 7"
+        "fen": "k6K/8/8/8/8/8/pppppppp/NNNNNNNN b - - 0 1",
+        "description": "Eight black pawns all capable of promoting via capture."
+      },
+      "expected": [
+        {
+          "move": "axb1=Q",
+          "fen": "k6K/8/8/8/8/8/1ppppppp/NqNNNNNN w - - 0 2"
+        },
+        {
+          "move": "axb1=R",
+          "fen": "k6K/8/8/8/8/8/1ppppppp/NrNNNNNN w - - 0 2"
+        },
+        {
+          "move": "axb1=N",
+          "fen": "k6K/8/8/8/8/8/1ppppppp/NnNNNNNN w - - 0 2"
+        },
+        {
+          "move": "axb1=B",
+          "fen": "k6K/8/8/8/8/8/1ppppppp/NbNNNNNN w - - 0 2"
+        },
+        {
+          "move": "bxa1=Q+",
+          "fen": "k6K/8/8/8/8/8/p1pppppp/qNNNNNNN w - - 0 2"
+        },
+        {
+          "move": "bxa1=R",
+          "fen": "k6K/8/8/8/8/8/p1pppppp/rNNNNNNN w - - 0 2"
+        },
+        {
+          "move": "bxa1=N",
+          "fen": "k6K/8/8/8/8/8/p1pppppp/nNNNNNNN w - - 0 2"
+        },
+        {
+          "move": "bxa1=B+",
+          "fen": "k6K/8/8/8/8/8/p1pppppp/bNNNNNNN w - - 0 2"
+        },
+        {
+          "move": "bxc1=Q",
+          "fen": "k6K/8/8/8/8/8/p1pppppp/NNqNNNNN w - - 0 2"
+        },
+        {
+          "move": "bxc1=R",
+          "fen": "k6K/8/8/8/8/8/p1pppppp/NNrNNNNN w - - 0 2"
+        },
+        {
+          "move": "bxc1=N",
+          "fen": "k6K/8/8/8/8/8/p1pppppp/NNnNNNNN w - - 0 2"
+        },
+        {
+          "move": "bxc1=B",
+          "fen": "k6K/8/8/8/8/8/p1pppppp/NNbNNNNN w - - 0 2"
+        },
+        {
+          "move": "cxb1=Q",
+          "fen": "k6K/8/8/8/8/8/pp1ppppp/NqNNNNNN w - - 0 2"
+        },
+        {
+          "move": "cxb1=R",
+          "fen": "k6K/8/8/8/8/8/pp1ppppp/NrNNNNNN w - - 0 2"
+        },
+        {
+          "move": "cxb1=N",
+          "fen": "k6K/8/8/8/8/8/pp1ppppp/NnNNNNNN w - - 0 2"
+        },
+        {
+          "move": "cxb1=B",
+          "fen": "k6K/8/8/8/8/8/pp1ppppp/NbNNNNNN w - - 0 2"
+        },
+        {
+          "move": "cxd1=Q",
+          "fen": "k6K/8/8/8/8/8/pp1ppppp/NNNqNNNN w - - 0 2"
+        },
+        {
+          "move": "cxd1=R",
+          "fen": "k6K/8/8/8/8/8/pp1ppppp/NNNrNNNN w - - 0 2"
+        },
+        {
+          "move": "cxd1=N",
+          "fen": "k6K/8/8/8/8/8/pp1ppppp/NNNnNNNN w - - 0 2"
+        },
+        {
+          "move": "cxd1=B",
+          "fen": "k6K/8/8/8/8/8/pp1ppppp/NNNbNNNN w - - 0 2"
+        },
+        {
+          "move": "dxc1=Q",
+          "fen": "k6K/8/8/8/8/8/ppp1pppp/NNqNNNNN w - - 0 2"
+        },
+        {
+          "move": "dxc1=R",
+          "fen": "k6K/8/8/8/8/8/ppp1pppp/NNrNNNNN w - - 0 2"
+        },
+        {
+          "move": "dxc1=N",
+          "fen": "k6K/8/8/8/8/8/ppp1pppp/NNnNNNNN w - - 0 2"
+        },
+        {
+          "move": "dxc1=B",
+          "fen": "k6K/8/8/8/8/8/ppp1pppp/NNbNNNNN w - - 0 2"
+        },
+        {
+          "move": "dxe1=Q",
+          "fen": "k6K/8/8/8/8/8/ppp1pppp/NNNNqNNN w - - 0 2"
+        },
+        {
+          "move": "dxe1=R",
+          "fen": "k6K/8/8/8/8/8/ppp1pppp/NNNNrNNN w - - 0 2"
+        },
+        {
+          "move": "dxe1=N",
+          "fen": "k6K/8/8/8/8/8/ppp1pppp/NNNNnNNN w - - 0 2"
+        },
+        {
+          "move": "dxe1=B",
+          "fen": "k6K/8/8/8/8/8/ppp1pppp/NNNNbNNN w - - 0 2"
+        },
+        {
+          "move": "exd1=Q",
+          "fen": "k6K/8/8/8/8/8/pppp1ppp/NNNqNNNN w - - 0 2"
+        },
+        {
+          "move": "exd1=R",
+          "fen": "k6K/8/8/8/8/8/pppp1ppp/NNNrNNNN w - - 0 2"
+        },
+        {
+          "move": "exd1=N",
+          "fen": "k6K/8/8/8/8/8/pppp1ppp/NNNnNNNN w - - 0 2"
+        },
+        {
+          "move": "exd1=B",
+          "fen": "k6K/8/8/8/8/8/pppp1ppp/NNNbNNNN w - - 0 2"
+        },
+        {
+          "move": "exf1=Q",
+          "fen": "k6K/8/8/8/8/8/pppp1ppp/NNNNNqNN w - - 0 2"
+        },
+        {
+          "move": "exf1=R",
+          "fen": "k6K/8/8/8/8/8/pppp1ppp/NNNNNrNN w - - 0 2"
+        },
+        {
+          "move": "exf1=N",
+          "fen": "k6K/8/8/8/8/8/pppp1ppp/NNNNNnNN w - - 0 2"
+        },
+        {
+          "move": "exf1=B",
+          "fen": "k6K/8/8/8/8/8/pppp1ppp/NNNNNbNN w - - 0 2"
+        },
+        {
+          "move": "fxe1=Q",
+          "fen": "k6K/8/8/8/8/8/ppppp1pp/NNNNqNNN w - - 0 2"
+        },
+        {
+          "move": "fxe1=R",
+          "fen": "k6K/8/8/8/8/8/ppppp1pp/NNNNrNNN w - - 0 2"
+        },
+        {
+          "move": "fxe1=N",
+          "fen": "k6K/8/8/8/8/8/ppppp1pp/NNNNnNNN w - - 0 2"
+        },
+        {
+          "move": "fxe1=B",
+          "fen": "k6K/8/8/8/8/8/ppppp1pp/NNNNbNNN w - - 0 2"
+        },
+        {
+          "move": "fxg1=Q",
+          "fen": "k6K/8/8/8/8/8/ppppp1pp/NNNNNNqN w - - 0 2"
+        },
+        {
+          "move": "fxg1=R",
+          "fen": "k6K/8/8/8/8/8/ppppp1pp/NNNNNNrN w - - 0 2"
+        },
+        {
+          "move": "fxg1=N",
+          "fen": "k6K/8/8/8/8/8/ppppp1pp/NNNNNNnN w - - 0 2"
+        },
+        {
+          "move": "fxg1=B",
+          "fen": "k6K/8/8/8/8/8/ppppp1pp/NNNNNNbN w - - 0 2"
+        },
+        {
+          "move": "gxf1=Q",
+          "fen": "k6K/8/8/8/8/8/pppppp1p/NNNNNqNN w - - 0 2"
+        },
+        {
+          "move": "gxf1=R",
+          "fen": "k6K/8/8/8/8/8/pppppp1p/NNNNNrNN w - - 0 2"
+        },
+        {
+          "move": "gxf1=N",
+          "fen": "k6K/8/8/8/8/8/pppppp1p/NNNNNnNN w - - 0 2"
+        },
+        {
+          "move": "gxf1=B",
+          "fen": "k6K/8/8/8/8/8/pppppp1p/NNNNNbNN w - - 0 2"
+        },
+        {
+          "move": "gxh1=Q",
+          "fen": "k6K/8/8/8/8/8/pppppp1p/NNNNNNNq w - - 0 2"
+        },
+        {
+          "move": "gxh1=R",
+          "fen": "k6K/8/8/8/8/8/pppppp1p/NNNNNNNr w - - 0 2"
+        },
+        {
+          "move": "gxh1=N",
+          "fen": "k6K/8/8/8/8/8/pppppp1p/NNNNNNNn w - - 0 2"
+        },
+        {
+          "move": "gxh1=B",
+          "fen": "k6K/8/8/8/8/8/pppppp1p/NNNNNNNb w - - 0 2"
+        },
+        {
+          "move": "hxg1=Q",
+          "fen": "k6K/8/8/8/8/8/ppppppp1/NNNNNNqN w - - 0 2"
+        },
+        {
+          "move": "hxg1=R",
+          "fen": "k6K/8/8/8/8/8/ppppppp1/NNNNNNrN w - - 0 2"
+        },
+        {
+          "move": "hxg1=N",
+          "fen": "k6K/8/8/8/8/8/ppppppp1/NNNNNNnN w - - 0 2"
+        },
+        {
+          "move": "hxg1=B",
+          "fen": "k6K/8/8/8/8/8/ppppppp1/NNNNNNbN w - - 0 2"
+        },
+        {
+          "move": "Ka7",
+          "fen": "7K/k7/8/8/8/8/pppppppp/NNNNNNNN w - - 1 2"
+        },
+        {
+          "move": "Kb7",
+          "fen": "7K/1k6/8/8/8/8/pppppppp/NNNNNNNN w - - 1 2"
+        },
+        {
+          "move": "Kb8",
+          "fen": "1k5K/8/8/8/8/8/pppppppp/NNNNNNNN w - - 1 2"
+        }
+      ]
+    },
+    {
+      "start": {
+        "fen": "8/ppp3p1/8/8/3p4/8/1ppp2K1/brk2Q1n b - - 12 7",
+        "description": "Black must block check by promotion."
       },
       "expected": [
         {
@@ -530,9 +1037,34 @@
       ]
     },
     {
+      "description": "Transpose of 8/ppp3p1/8/8/3p4/8/1ppp2K1/brk2Q1n b - - 12 7",
       "start": {
-        "description": "White can promote and check black king if promoting to knight.",
-        "fen": "5N1N/4k1P1/8/8/8/8/8/K7 w - - 0 1"
+        "fen": "BRK2q1N/1PPP2k1/8/3P4/8/8/PPP3P1/8 w - - 12 7",
+        "description": "White must block check by promotion."
+      },
+      "expected": [
+        {
+          "move": "d8=Q",
+          "fen": "BRKQ1q1N/1PP3k1/8/3P4/8/8/PPP3P1/8 b - - 0 7"
+        },
+        {
+          "move": "d8=R",
+          "fen": "BRKR1q1N/1PP3k1/8/3P4/8/8/PPP3P1/8 b - - 0 7"
+        },
+        {
+          "move": "d8=N",
+          "fen": "BRKN1q1N/1PP3k1/8/3P4/8/8/PPP3P1/8 b - - 0 7"
+        },
+        {
+          "move": "d8=B",
+          "fen": "BRKB1q1N/1PP3k1/8/3P4/8/8/PPP3P1/8 b - - 0 7"
+        }
+      ]
+    },
+    {
+      "start": {
+        "fen": "5N1N/4k1P1/8/8/8/8/8/K7 w - - 0 1",
+        "description": "White can promote and check black king if promoting to knight."
       },
       "expected": [
         {
@@ -590,9 +1122,70 @@
       ]
     },
     {
+      "description": "Transpose of 5N1N/4k1P1/8/8/8/8/8/K7 w - - 0 1",
       "start": {
-        "description": "White has eight pawns ready to promote, but none can.",
-        "fen": "NBQKRBRN/PPPPPPPP/8/8/8/8/3k4/8 w - - 0 1"
+        "fen": "k7/8/8/8/8/8/4K1p1/5n1n b - - 0 1",
+        "description": "Black can promote and check white king if promoting to knight."
+      },
+      "expected": [
+        {
+          "move": "Nd2",
+          "fen": "k7/8/8/8/8/8/3nK1p1/7n w - - 1 2"
+        },
+        {
+          "move": "Nh2",
+          "fen": "k7/8/8/8/8/8/4K1pn/7n w - - 1 2"
+        },
+        {
+          "move": "Ne3",
+          "fen": "k7/8/8/8/8/4n3/4K1p1/7n w - - 1 2"
+        },
+        {
+          "move": "Nfg3+",
+          "fen": "k7/8/8/8/8/6n1/4K1p1/7n w - - 1 2"
+        },
+        {
+          "move": "Nf2",
+          "fen": "k7/8/8/8/8/8/4Knp1/5n2 w - - 1 2"
+        },
+        {
+          "move": "Nhg3+",
+          "fen": "k7/8/8/8/8/6n1/4K1p1/5n2 w - - 1 2"
+        },
+        {
+          "move": "g1=Q",
+          "fen": "k7/8/8/8/8/8/4K3/5nqn w - - 0 2"
+        },
+        {
+          "move": "g1=R",
+          "fen": "k7/8/8/8/8/8/4K3/5nrn w - - 0 2"
+        },
+        {
+          "move": "g1=N+",
+          "fen": "k7/8/8/8/8/8/4K3/5nnn w - - 0 2"
+        },
+        {
+          "move": "g1=B",
+          "fen": "k7/8/8/8/8/8/4K3/5nbn w - - 0 2"
+        },
+        {
+          "move": "Ka7",
+          "fen": "8/k7/8/8/8/8/4K1p1/5n1n w - - 1 2"
+        },
+        {
+          "move": "Kb7",
+          "fen": "8/1k6/8/8/8/8/4K1p1/5n1n w - - 1 2"
+        },
+        {
+          "move": "Kb8",
+          "fen": "1k6/8/8/8/8/8/4K1p1/5n1n w - - 1 2"
+        }
+      ]
+    },
+    {
+      "start": {
+        "fen": "NBQKRBRN/PPPPPPPP/8/8/8/8/3k4/8 w - - 0 1",
+        "description": "White has eight pawns ready to promote, but none can."
       },
       "expected": [
         {
@@ -606,9 +1199,26 @@
       ]
     },
     {
+      "description": "Transpose of NBQKRBRN/PPPPPPPP/8/8/8/8/3k4/8 w - - 0 1",
       "start": {
-        "description": "White must promote to escape check.",
-        "fen": "3K3r/2PPP3/8/2k5/8/8/8/8 w - - 0 1"
+        "fen": "8/3K4/8/8/8/8/pppppppp/nbqkrbrn b - - 0 1",
+        "description": "Black has eight pawns ready to promote, but none can."
+      },
+      "expected": [
+        {
+          "move": "Nb3",
+          "fen": "8/3K4/8/8/8/1n6/pppppppp/1bqkrbrn w - - 1 2"
+        },
+        {
+          "move": "Ng3",
+          "fen": "8/3K4/8/8/8/6n1/pppppppp/nbqkrbr1 w - - 1 2"
+        }
+      ]
+    },
+    {
+      "start": {
+        "fen": "3K3r/2PPP3/8/2k5/8/8/8/8 w - - 0 1",
+        "description": "White must promote to escape check."
       },
       "expected": [
         {
@@ -630,9 +1240,34 @@
       ]
     },
     {
+      "description": "Transpose of 3K3r/2PPP3/8/2k5/8/8/8/8 w - - 0 1",
       "start": {
-        "description": "White must capture and promote to escape mate.",
-        "fen": "q7/1PPPPPPP/8/8/8/K1k5/8/8 w - - 0 1"
+        "fen": "8/8/8/8/2K5/8/2ppp3/3k3R b - - 0 1",
+        "description": "Black must promote to escape check."
+      },
+      "expected": [
+        {
+          "move": "e1=Q",
+          "fen": "8/8/8/8/2K5/8/2pp4/3kq2R w - - 0 2"
+        },
+        {
+          "move": "e1=R",
+          "fen": "8/8/8/8/2K5/8/2pp4/3kr2R w - - 0 2"
+        },
+        {
+          "move": "e1=N",
+          "fen": "8/8/8/8/2K5/8/2pp4/3kn2R w - - 0 2"
+        },
+        {
+          "move": "e1=B",
+          "fen": "8/8/8/8/2K5/8/2pp4/3kb2R w - - 0 2"
+        }
+      ]
+    },
+    {
+      "start": {
+        "fen": "q7/1PPPPPPP/8/8/8/K1k5/8/8 w - - 0 1",
+        "description": "White must capture and promote to escape mate."
       },
       "expected": [
         {
@@ -650,6 +1285,31 @@
         {
           "move": "bxa8=B",
           "fen": "B7/2PPPPPP/8/8/8/K1k5/8/8 b - - 0 1"
+        }
+      ]
+    },
+    {
+      "description": "Transpose of q7/1PPPPPPP/8/8/8/K1k5/8/8 w - - 0 1",
+      "start": {
+        "fen": "8/8/k1K5/8/8/8/1ppppppp/Q7 b - - 0 1",
+        "description": "Black must capture and promote to escape mate."
+      },
+      "expected": [
+        {
+          "move": "bxa1=Q",
+          "fen": "8/8/k1K5/8/8/8/2pppppp/q7 w - - 0 2"
+        },
+        {
+          "move": "bxa1=R",
+          "fen": "8/8/k1K5/8/8/8/2pppppp/r7 w - - 0 2"
+        },
+        {
+          "move": "bxa1=N",
+          "fen": "8/8/k1K5/8/8/8/2pppppp/n7 w - - 0 2"
+        },
+        {
+          "move": "bxa1=B",
+          "fen": "8/8/k1K5/8/8/8/2pppppp/b7 w - - 0 2"
         }
       ]
     }
