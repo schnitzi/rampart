@@ -252,13 +252,13 @@ internal class FENTestFileEditor(private var testCaseGroup: TestCaseGroup = Test
             val newFEN = transposedBoardState.toFEN()
             if (!testCaseGroup.contains(newFEN)) {
                 val newTestCase = createTestCase(newFEN, "Transpose of ${testCase.start.fen}",
-                    testCase.start.description!!
-                        .replace("white", "zzz")
-                        .replace("White", "ZZZ")
-                        .replace("black", "white")
-                        .replace("Black", "White")
-                        .replace("zzz", "black")
-                        .replace("ZZZ", "Black"))
+                    testCase.start.description
+                        ?.replace("white", "zzz")
+                        ?.replace("White", "ZZZ")
+                        ?.replace("black", "white")
+                        ?.replace("Black", "White")
+                        ?.replace("zzz", "black")
+                        ?.replace("ZZZ", "Black"))
                 newTestCases.add(newTestCase)
                 count += 1
             }

@@ -93,8 +93,8 @@ Your move generator may or may not generate the actual move names
 using these same test data files -- all of them include the move
 names (in algebraic format) that your move generator should
 generate.  Note this is a weaker test than testing against the
-resulting FEN positions, which include various flags that fully
-represent the board state.
+resulting FEN positions, because the FEN positions include various
+flags that more fully represent the board state.
 
 Moves that result in a checkmate do in fact generate the standard
 algebraic checkmate symbol `#` at the end of their move names, but
