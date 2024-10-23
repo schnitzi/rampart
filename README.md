@@ -22,7 +22,9 @@ subtleties that arise in extreme circumstances or because the rules
 are sometimes poorly understood.
 
 This project grew out of my failure to find a good set of test data
-for a chess move generator I was writing.  I created some test data
+for a chess move generator I was writing.  (Perft data can be used for
+this, but typically is very difficult to track down the cause of test
+failures!)  I created some test data
 by hand, but it was a laborious process, and I found myself repeatedly
 wishing for something more complete and battle-tested.  So I decided
 to make my own full data set, and the easiest way to do that was to
