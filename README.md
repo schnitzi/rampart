@@ -52,8 +52,8 @@ The test data files are located in [src/main/resources/testcases](src/main/resou
 The files are split by category -- castling, pawn moves, high piece numbers,
 etc., each containing multiple test cases.  Each test case consists
 of a starting board position, and the set of resulting board positions
-that your move generator should generate.  Board positions are
-specified in FEN (https://en.wikipedia.org/wiki/Forsyth%E2%80%93Edwards_Notation)
+that your move generator should generate from that position.  Board
+positions are specified in [FEN](https://en.wikipedia.org/wiki/Forsyth%E2%80%93Edwards_Notation)
 format, and all the test cases represent valid board positions that
 can be reached in a standard game of chess.
 
@@ -63,16 +63,16 @@ most modern languages), and the ability to convert a FEN into your
 internal board representation (and vice versa, which I promise will
 be handy for other purposes later).  As there is no particular order
 to the resulting moves, it is recommended that you generate moves into
-a Set class, so you can just check that `actual` equals `expected`.
+some sort of Set class, so you can just check that `actual` equals `expected`.
 
 There are test files for positions involving checkmates and stalemates.
 Most move generators will and should find no legal moves for
-these test cases, but depending on how you write your chess engine, your
+test cases in either, but depending on how you write your chess engine, your
 move generator might never encounter this situation -- you can skip these
-tests if so.  
+tests if so.
 
 As this project contains its own move generator, I've included
-sample tests (in Java and Kotlin) that test it against the test
+sample tests (in [Java](src/test/java/org/computronium/chess/TestMoveGeneratorJava.java) and [Kotlin](src/test/kotlin/org/computronium/chess/TestMoveGeneratorKotlin.kt)) that test it against the test
 data files.  As the test data files were generated using this same
 engine, the tests will of course pass!  But the tests demonstrate
 how you can set up similar tests for your chess engine, as described
@@ -87,9 +87,12 @@ test case, compare the expected set of moves (contained in the data
 file as FENs) against the set of moves that your move generator
 generates.  Your move generator should generate the exact same set of
 resulting boards in all cases -- no more, and no less.  If there is any
-discrepancy, you probably have a bug in your move generator.  (Or,
-possibly, there's a bug in the test data -- please let me know, so I can
-fix it!)
+discrepancy, this probably means one of these things:
+* a bug in your move generator
+* a bug in your FEN-to-board reader
+* a bug in your board-to-FEN converter
+* a bug in your test
+* a bug in the test data -- please let me know, so I can fix it!
 
 ### Type 2: Algebraic move names
 
