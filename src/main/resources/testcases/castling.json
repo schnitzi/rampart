@@ -5189,6 +5189,191 @@
           "fen": "rnbqk2N/ppp1n1pp/8/2b5/8/2P5/PP1pBPPP/RNBQ1K1R b q - 0 8"
         }
       ]
+    },
+    {
+      "description": "From https://www.chessprogramming.org/Perft_Results#Position_5",
+      "start": {
+        "fen": "rnbq1k1r/pp1Pbppp/2p5/8/2B5/8/PPP1NnPP/RNBQK2R w KQ - 1 8",
+        "description": "White should be able to castle kingside despite the black knight on f2"
+      },
+      "expected": [
+        {
+          "move": "Bxf7",
+          "fen": "rnbq1k1r/pp1PbBpp/2p5/8/8/8/PPP1NnPP/RNBQK2R b KQ - 0 8"
+        },
+        {
+          "move": "Be6",
+          "fen": "rnbq1k1r/pp1Pbppp/2p1B3/8/8/8/PPP1NnPP/RNBQK2R b KQ - 2 8"
+        },
+        {
+          "move": "Ba6",
+          "fen": "rnbq1k1r/pp1Pbppp/B1p5/8/8/8/PPP1NnPP/RNBQK2R b KQ - 2 8"
+        },
+        {
+          "move": "Bd5",
+          "fen": "rnbq1k1r/pp1Pbppp/2p5/3B4/8/8/PPP1NnPP/RNBQK2R b KQ - 2 8"
+        },
+        {
+          "move": "Bb5",
+          "fen": "rnbq1k1r/pp1Pbppp/2p5/1B6/8/8/PPP1NnPP/RNBQK2R b KQ - 2 8"
+        },
+        {
+          "move": "Bd3",
+          "fen": "rnbq1k1r/pp1Pbppp/2p5/8/8/3B4/PPP1NnPP/RNBQK2R b KQ - 2 8"
+        },
+        {
+          "move": "Bb3",
+          "fen": "rnbq1k1r/pp1Pbppp/2p5/8/8/1B6/PPP1NnPP/RNBQK2R b KQ - 2 8"
+        },
+        {
+          "move": "Nf4",
+          "fen": "rnbq1k1r/pp1Pbppp/2p5/8/2B2N2/8/PPP2nPP/RNBQK2R b KQ - 2 8"
+        },
+        {
+          "move": "Nd4",
+          "fen": "rnbq1k1r/pp1Pbppp/2p5/8/2BN4/8/PPP2nPP/RNBQK2R b KQ - 2 8"
+        },
+        {
+          "move": "Ng3",
+          "fen": "rnbq1k1r/pp1Pbppp/2p5/8/2B5/6N1/PPP2nPP/RNBQK2R b KQ - 2 8"
+        },
+        {
+          "move": "Nec3",
+          "fen": "rnbq1k1r/pp1Pbppp/2p5/8/2B5/2N5/PPP2nPP/RNBQK2R b KQ - 2 8"
+        },
+        {
+          "move": "Ng1",
+          "fen": "rnbq1k1r/pp1Pbppp/2p5/8/2B5/8/PPP2nPP/RNBQK1NR b KQ - 2 8"
+        },
+        {
+          "move": "Rg1",
+          "fen": "rnbq1k1r/pp1Pbppp/2p5/8/2B5/8/PPP1NnPP/RNBQK1R1 b Q - 2 8"
+        },
+        {
+          "move": "Rf1",
+          "fen": "rnbq1k1r/pp1Pbppp/2p5/8/2B5/8/PPP1NnPP/RNBQKR2 b Q - 2 8"
+        },
+        {
+          "move": "Kxf2",
+          "fen": "rnbq1k1r/pp1Pbppp/2p5/8/2B5/8/PPP1NKPP/RNBQ3R b - - 0 8"
+        },
+        {
+          "move": "Kd2",
+          "fen": "rnbq1k1r/pp1Pbppp/2p5/8/2B5/8/PPPKNnPP/RNBQ3R b - - 2 8"
+        },
+        {
+          "move": "Kf1",
+          "fen": "rnbq1k1r/pp1Pbppp/2p5/8/2B5/8/PPP1NnPP/RNBQ1K1R b - - 2 8"
+        },
+        {
+          "move": "Qd6",
+          "fen": "rnbq1k1r/pp1Pbppp/2pQ4/8/2B5/8/PPP1NnPP/RNB1K2R b KQ - 2 8"
+        },
+        {
+          "move": "Qd5",
+          "fen": "rnbq1k1r/pp1Pbppp/2p5/3Q4/2B5/8/PPP1NnPP/RNB1K2R b KQ - 2 8"
+        },
+        {
+          "move": "Qd4",
+          "fen": "rnbq1k1r/pp1Pbppp/2p5/8/2BQ4/8/PPP1NnPP/RNB1K2R b KQ - 2 8"
+        },
+        {
+          "move": "Qd3",
+          "fen": "rnbq1k1r/pp1Pbppp/2p5/8/2B5/3Q4/PPP1NnPP/RNB1K2R b KQ - 2 8"
+        },
+        {
+          "move": "Qd2",
+          "fen": "rnbq1k1r/pp1Pbppp/2p5/8/2B5/8/PPPQNnPP/RNB1K2R b KQ - 2 8"
+        },
+        {
+          "move": "Bh6",
+          "fen": "rnbq1k1r/pp1Pbppp/2p4B/8/2B5/8/PPP1NnPP/RN1QK2R b KQ - 2 8"
+        },
+        {
+          "move": "Bg5",
+          "fen": "rnbq1k1r/pp1Pbppp/2p5/6B1/2B5/8/PPP1NnPP/RN1QK2R b KQ - 2 8"
+        },
+        {
+          "move": "Bf4",
+          "fen": "rnbq1k1r/pp1Pbppp/2p5/8/2B2B2/8/PPP1NnPP/RN1QK2R b KQ - 2 8"
+        },
+        {
+          "move": "Be3",
+          "fen": "rnbq1k1r/pp1Pbppp/2p5/8/2B5/4B3/PPP1NnPP/RN1QK2R b KQ - 2 8"
+        },
+        {
+          "move": "Bd2",
+          "fen": "rnbq1k1r/pp1Pbppp/2p5/8/2B5/8/PPPBNnPP/RN1QK2R b KQ - 2 8"
+        },
+        {
+          "move": "Nbc3",
+          "fen": "rnbq1k1r/pp1Pbppp/2p5/8/2B5/2N5/PPP1NnPP/R1BQK2R b KQ - 2 8"
+        },
+        {
+          "move": "Na3",
+          "fen": "rnbq1k1r/pp1Pbppp/2p5/8/2B5/N7/PPP1NnPP/R1BQK2R b KQ - 2 8"
+        },
+        {
+          "move": "Nd2",
+          "fen": "rnbq1k1r/pp1Pbppp/2p5/8/2B5/8/PPPNNnPP/R1BQK2R b KQ - 2 8"
+        },
+        {
+          "move": "O-O",
+          "fen": "rnbq1k1r/pp1Pbppp/2p5/8/2B5/8/PPP1NnPP/RNBQ1RK1 b - - 2 8"
+        },
+        {
+          "move": "dxc8=Q",
+          "fen": "rnQq1k1r/pp2bppp/2p5/8/2B5/8/PPP1NnPP/RNBQK2R b KQ - 0 8"
+        },
+        {
+          "move": "dxc8=R",
+          "fen": "rnRq1k1r/pp2bppp/2p5/8/2B5/8/PPP1NnPP/RNBQK2R b KQ - 0 8"
+        },
+        {
+          "move": "dxc8=B",
+          "fen": "rnBq1k1r/pp2bppp/2p5/8/2B5/8/PPP1NnPP/RNBQK2R b KQ - 0 8"
+        },
+        {
+          "move": "dxc8=N",
+          "fen": "rnNq1k1r/pp2bppp/2p5/8/2B5/8/PPP1NnPP/RNBQK2R b KQ - 0 8"
+        },
+        {
+          "move": "h3",
+          "fen": "rnbq1k1r/pp1Pbppp/2p5/8/2B5/7P/PPP1NnP1/RNBQK2R b KQ - 0 8"
+        },
+        {
+          "move": "g3",
+          "fen": "rnbq1k1r/pp1Pbppp/2p5/8/2B5/6P1/PPP1Nn1P/RNBQK2R b KQ - 0 8"
+        },
+        {
+          "move": "c3",
+          "fen": "rnbq1k1r/pp1Pbppp/2p5/8/2B5/2P5/PP2NnPP/RNBQK2R b KQ - 0 8"
+        },
+        {
+          "move": "b3",
+          "fen": "rnbq1k1r/pp1Pbppp/2p5/8/2B5/1P6/P1P1NnPP/RNBQK2R b KQ - 0 8"
+        },
+        {
+          "move": "a3",
+          "fen": "rnbq1k1r/pp1Pbppp/2p5/8/2B5/P7/1PP1NnPP/RNBQK2R b KQ - 0 8"
+        },
+        {
+          "move": "h4",
+          "fen": "rnbq1k1r/pp1Pbppp/2p5/8/2B4P/8/PPP1NnP1/RNBQK2R b KQ h3 0 8"
+        },
+        {
+          "move": "g4",
+          "fen": "rnbq1k1r/pp1Pbppp/2p5/8/2B3P1/8/PPP1Nn1P/RNBQK2R b KQ g3 0 8"
+        },
+        {
+          "move": "b4",
+          "fen": "rnbq1k1r/pp1Pbppp/2p5/8/1PB5/8/P1P1NnPP/RNBQK2R b KQ b3 0 8"
+        },
+        {
+          "move": "a4",
+          "fen": "rnbq1k1r/pp1Pbppp/2p5/8/P1B5/8/1PP1NnPP/RNBQK2R b KQ a3 0 8"
+        }
+      ]
     }
   ]
 }
