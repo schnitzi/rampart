@@ -49,7 +49,7 @@
         },
         {
           "move": "g4",
-          "fen": "r3r1k1/pp3pbp/1qp1b1p1/2B5/2BP2P1/Q1n2N2/P4P1P/3R1K1R b - g3 0 18"
+          "fen": "r3r1k1/pp3pbp/1qp1b1p1/2B5/2BP2P1/Q1n2N2/P4P1P/3R1K1R b - - 0 18"
         },
         {
           "move": "h3",
@@ -57,7 +57,7 @@
         },
         {
           "move": "h4",
-          "fen": "r3r1k1/pp3pbp/1qp1b1p1/2B5/2BP3P/Q1n2N2/P4PP1/3R1K1R b - h3 0 18"
+          "fen": "r3r1k1/pp3pbp/1qp1b1p1/2B5/2BP3P/Q1n2N2/P4PP1/3R1K1R b - - 0 18"
         },
         {
           "move": "Qb2",
@@ -310,7 +310,7 @@
         },
         {
           "move": "a5",
-          "fen": "5rk1/1p4pp/4p3/p1R3Q1/3n4/2q4r/P1P2PPP/5RK1 w - a6 0 2"
+          "fen": "5rk1/1p4pp/4p3/p1R3Q1/3n4/2q4r/P1P2PPP/5RK1 w - - 0 2"
         },
         {
           "move": "b6",
@@ -318,7 +318,7 @@
         },
         {
           "move": "b5",
-          "fen": "5rk1/p5pp/4p3/1pR3Q1/3n4/2q4r/P1P2PPP/5RK1 w - b6 0 2"
+          "fen": "5rk1/p5pp/4p3/1pR3Q1/3n4/2q4r/P1P2PPP/5RK1 w - - 0 2"
         },
         {
           "move": "g6",
@@ -330,7 +330,7 @@
         },
         {
           "move": "h5",
-          "fen": "5rk1/pp4p1/4p3/2R3Qp/3n4/2q4r/P1P2PPP/5RK1 w - h6 0 2"
+          "fen": "5rk1/pp4p1/4p3/2R3Qp/3n4/2q4r/P1P2PPP/5RK1 w - - 0 2"
         },
         {
           "move": "Rf7",
