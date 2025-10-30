@@ -11,6 +11,6 @@ class PawnInitialMoveTransform(private val over: Int) : Transform {
 
     override fun rollback(boardState: BoardState) {
         // Surprisingly, no need to override rollback here.  En passant capture position is
-        // entirely handled in BaseMoveAspect.
+        // entirely handled in BaseMoveTransform.
     }
 }
