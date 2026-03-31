@@ -24,11 +24,10 @@ are sometimes poorly understood.
 This project grew out of my failure to find a good set of test data
 for a chess move generator I was writing.  (Perft data can be used for
 this, but typically is very difficult to track down the cause of test
-failures!)  I created some test data
-by hand, but it was a laborious process, and I found myself repeatedly
-wishing for something more complete and battle-tested.  So I decided
-to make my own full data set, and the easiest way to do that was to
-write a tool.
+failures!)  I created some test data by hand, but it was a laborious
+process, and I found myself repeatedly wishing for something more complete
+and battle-tested.  So I decided to make my own full data set, and the
+easiest way to do that was to write a tool.
 
 This project contains:
 
@@ -56,12 +55,14 @@ etc., each containing multiple test cases.  Each test case consists
 of a starting board position, and the set of resulting board positions
 that your move generator should generate from that position.  Board
 positions are specified in [FEN](https://en.wikipedia.org/wiki/Forsyth%E2%80%93Edwards_Notation)
-format, and all the test cases represent valid board positions that
-can be reached in a standard game of chess.
+format by default, and also in [XFEN](https://en.wikipedia.org/wiki/X-FEN) for those
+cases where there is a difference between the two. All the test cases
+represent valid board positions that can be reached in a standard game
+of chess.
 
 So to use these data files, you will need the ability to parse JSON
 (there are a number of libraries that will help you do that, for
-most modern languages), and the ability to convert a FEN into your
+most modern languages), and the ability to convert a FEN (or XFEN) into your
 internal board representation (and vice versa, which I promise will
 be handy for other purposes later).  As there is no particular order
 to the resulting moves, it is recommended that you generate moves into
@@ -86,7 +87,7 @@ below.
 
 Your tests can run through the included data files, and for each
 test case, compare the expected set of moves (contained in the data
-file as FENs) against the set of moves that your move generator
+file as FENs or X-FENs) against the set of moves that your move generator
 generates.  Your move generator should generate the exact same set of
 resulting boards in all cases -- no more, and no less.  If there is any
 discrepancy, this probably means one of these things:
@@ -131,6 +132,8 @@ The included test files are usable on their own for testing your move
 generator.  These were generated using a small graphical editor, the
 code for which is included in the project but entirely unnecessary for
 your testing.  It can be used to build up your own test cases, either
-by editing the existing test case files or creating new ones.
+by editing the existing test case files or creating new ones.  (Note
+that the tool generates only FEN notation currently, not X-FEN.  This
+will be amended in a future release.)
 
 ![FEN test file editor](doc/editor.png)

@@ -36,6 +36,9 @@ class TestMoveGeneratorKotlin {
             println("  Testing case '${testCase}'")
 
             val expectedMoves = testCase.expected.associateBy({ it.move.toString() }, { it.fen })
+            // Note: if your move generator generates X-FEN instead of FEN, modify the TestCasePosition
+            // class to read the "x-fen" JSON field and do something like this here instead:
+            // val expectedMoves = testCase.expected.associateBy({ it.move.toString() }, { it.xFen })
 
             val runner = GameRunner.fromFEN(testCase.start.fen)
             val startPos = runner.generateSearchNode()

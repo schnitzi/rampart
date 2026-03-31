@@ -8,6 +8,7 @@ import org.computronium.chess.core.moves.Move;
 import org.computronium.chess.testcaseeditor.TestCase;
 import org.computronium.chess.testcaseeditor.TestCase.TestCasePosition;
 import org.computronium.chess.testcaseeditor.TestCaseGroup;
+import org.jetbrains.annotations.NotNull;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -41,10 +42,7 @@ public final class TestMoveGeneratorJava {
 
             System.out.println("  Testing case '" + testCase + "'");
 
-            final Map<String, String> expectedMoves = new HashMap<>();
-            for (TestCasePosition position : testCase.getExpected()) {
-                expectedMoves.put(position.getMove(), position.getFen());
-            }
+            final Map<String, String> expectedMoves = getExpectedMoves(testCase);
 
             GameRunner runner = GameRunner.Companion.fromFEN(testCase.getStart().getFen(), new AlgebraicMoveNameGenerator());
             SearchNode startPos = runner.generateSearchNode();
@@ -75,5 +73,17 @@ public final class TestMoveGeneratorJava {
 
             Assert.assertEquals("Did not match expected board states", expectedMoves, actualMoves);
         }
+    }
+
+    @NotNull
+    private static Map<String, String> getExpectedMoves(TestCase testCase) {
+        final Map<String, String> expectedMoves = new HashMap<>();
+        for (TestCasePosition position : testCase.getExpected()) {
+            expectedMoves.put(position.getMove(), position.getFen());
+            // Note: if your move generator generates X-FEN instead of FEN, modify the TestCasePosition
+            // class to read the "x-fen" JSON field and do something like this here instead:
+            // expectedMoves.put(position.getMove(), position.getXFen());
+        }
+        return expectedMoves;
     }
 }
